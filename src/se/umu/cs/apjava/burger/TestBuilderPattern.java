@@ -1,4 +1,4 @@
-package uppgift_1.burger;
+package se.umu.cs.apjava.burger;
 
 public class TestBuilderPattern {
     public static void main(String[] args){

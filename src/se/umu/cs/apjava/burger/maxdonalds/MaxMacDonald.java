@@ -1,5 +1,5 @@
-package uppgift_2.maxdonalds;
-import uppgift_2.maxdonalds.burger.Burger;
+package se.umu.cs.apjava.burger.maxdonalds;
+import se.umu.cs.apjava.burger.maxdonalds.burger.Burger;
 
 
 public class MaxMacDonald {
