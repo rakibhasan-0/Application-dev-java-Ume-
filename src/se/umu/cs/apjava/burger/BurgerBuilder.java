@@ -1,4 +1,4 @@
-package uppgift_1.burger;
+package se.umu.cs.apjava.burger;
 
 public class BurgerBuilder {
     Burger burger;

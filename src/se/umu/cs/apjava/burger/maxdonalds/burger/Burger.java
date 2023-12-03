@@ -1,4 +1,4 @@
-package uppgift_2.maxdonalds.burger;
+package se.umu.cs.apjava.burger.maxdonalds.burger;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,10 +1,9 @@
-package uppgift_2.maxdonalds.burger;
+package se.umu.cs.apjava.burger.maxdonalds.burger;
 import java.util.ArrayList;
 
-class FishBurger extends Burger {
-
-    protected FishBurger(){
-        super.totalPrice = 12;
+class ChickenBurger extends Burger {
+    protected ChickenBurger(){
+        super.totalPrice = 10;
         vegetables = new ArrayList<>();
         sauces = new ArrayList<>();
     }
@@ -17,7 +16,7 @@ class FishBurger extends Burger {
     @Override
     public String getDescription() {
         StringBuilder description = new StringBuilder();
-        description.append("Fish Burger with bread");
+        description.append("Chicken Burger with bread");
         for (String s : vegetables) {
             description.append(", ").append(s);
         }

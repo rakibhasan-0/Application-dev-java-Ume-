@@ -1,6 +1,6 @@
-package uppgift_2.maxdonalds;
-import uppgift_2.maxdonalds.burger.Burger;
-import uppgift_2.maxdonalds.burger.BurgerBuilder;
+package se.umu.cs.apjava.burger.maxdonalds;
+import se.umu.cs.apjava.burger.maxdonalds.burger.Burger;
+import se.umu.cs.apjava.burger.maxdonalds.burger.BurgerBuilder;
 
 
 public class ChickenTomatoKetchup implements BurgerFactory{
