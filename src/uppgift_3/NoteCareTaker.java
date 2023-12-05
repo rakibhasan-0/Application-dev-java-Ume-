@@ -29,7 +29,11 @@ public class NoteCareTaker {
     public NoteMemento getMemento(UUID noteId) {
         Stack<NoteMemento> mementosStack = mementosMap.get(noteId);
         if (mementosStack != null && !mementosStack.isEmpty()) {
-            return mementosStack.pop();
+            if(!mementosStack.isEmpty()){
+                return mementosStack.pop();
+            }else{
+                return null;
+            }
         }
         return null;
     }

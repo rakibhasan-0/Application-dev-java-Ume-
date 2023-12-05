@@ -40,7 +40,6 @@ public class NoteBookController{
         });
     }
 
-
     private void restoreButton() {
         gui.getRestoreButton().addActionListener(e -> {
             if (selectedNoteIndex != -1) {
@@ -48,18 +47,13 @@ public class NoteBookController{
                 if (selectedNoteId != null) {
                     NoteMemento memento = careTaker.getMemento(selectedNoteId);
                     if (memento != null) {
-                        String previousState = memento.getNote();
-                        String textFromTextArea = gui.getTextArea().getText();
-                        if(textFromTextArea.equals(previousState)){
-                            previousState = careTaker.getMemento(selectedNoteId).getNote();
-                        }
-                        gui.getTextArea().setText(previousState);
-                        Note currentNote = notes.get(selectedNoteId);
-                        if (currentNote != null) {
-                            currentNote.setNote(previousState);
-                        }
+                        setPreviousState(memento, selectedNoteId);
                     }else {
                         gui.getTextArea().setText(" ");
+                        Note note = notes.get(selectedNoteId);
+                        if(note != null) {
+                            note.setNote("");
+                        }
                     }
                 }
             }else {
@@ -68,6 +62,24 @@ public class NoteBookController{
         });
     }
 
+    private void setPreviousState(NoteMemento memento, UUID selectedNoteId) {
+        String previousState = memento.getNote();
+        String textFromTextArea = gui.getTextArea().getText();
+        Note currentNote = notes.get(selectedNoteId);
+        if(textFromTextArea.equals(previousState)){
+            NoteMemento noteMemento = careTaker.getMemento(selectedNoteId);
+            if ((noteMemento != null)){
+                previousState = noteMemento.getNote();
+            }else{
+                previousState ="";
+            }
+        }
+        if(currentNote != null){
+            currentNote.setNote(previousState);
+        }
+        gui.getTextArea().setText(previousState);
+
+    }
 
 
     private void saveButton() {
