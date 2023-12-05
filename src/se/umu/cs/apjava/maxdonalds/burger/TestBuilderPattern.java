@@ -1,4 +1,4 @@
-package se.umu.cs.apjava.burger;
+package se.umu.cs.apjava.maxdonalds.burger;
 
 public class TestBuilderPattern {
     public static void main(String[] args){

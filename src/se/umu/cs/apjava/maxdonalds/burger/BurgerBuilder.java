@@ -1,4 +1,11 @@
-package se.umu.cs.apjava.burger;
+package se.umu.cs.apjava.maxdonalds.burger;
+
+/**
+ * That class creates the burger object which the user specified, and it will
+ * add ingredients of the burger such as beef, vegetables and so on.
+ * There is a method name build() which returns the object that has been built
+ * by using that class.
+ */
 
 public class BurgerBuilder {
     Burger burger;

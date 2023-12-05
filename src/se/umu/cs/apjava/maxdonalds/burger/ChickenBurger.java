@@ -1,6 +1,11 @@
-package se.umu.cs.apjava.burger;
+package se.umu.cs.apjava.maxdonalds.burger;
 import java.util.ArrayList;
 
+/**
+ * That class represents a chicken burger and it will get the cost to the user,
+ * There will be methods to get the total price of the burger and description of the
+ * burger.
+ */
 class ChickenBurger extends Burger {
     protected ChickenBurger(){
         super.totalPrice = 10;
