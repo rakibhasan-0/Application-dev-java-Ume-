@@ -1,7 +1,6 @@
 package se.umu.cs.apjava.burger;
 
 public class BeefBurger extends Burger {
-
     public BeefBurger(){
         super.totalPrice = 11;
     }

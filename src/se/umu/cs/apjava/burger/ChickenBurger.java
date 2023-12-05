@@ -1,5 +1,4 @@
 package se.umu.cs.apjava.burger;
-
 import java.util.ArrayList;
 
 class ChickenBurger extends Burger {

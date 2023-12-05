@@ -1,6 +1,9 @@
 package uppgift_3;
 import java.util.UUID;
 
+/**
+ * That class represents each note.
+ */
 public class Note {
     private UUID id;
     private String note;
@@ -23,9 +26,7 @@ public class Note {
     }
 
     public NoteMemento save(){
-        NoteMemento m = new NoteMemento(this.id, this.note);
-        System.out.println("Note from Memento: "+ m.getNote());
-        return m;
+        return new NoteMemento(this.id, this.note);
     }
 
 

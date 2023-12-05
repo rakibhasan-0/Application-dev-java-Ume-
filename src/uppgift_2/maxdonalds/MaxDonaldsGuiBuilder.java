@@ -1,5 +1,5 @@
-package se.umu.cs.apjava.burger.maxdonalds;
-import se.umu.cs.apjava.burger.maxdonalds.burger.Burger;
+package uppgift_2.maxdonalds;
+import se.umu.cs.apjava.burger.Burger;
 import javax.swing.*;
 import java.awt.*;
 
@@ -58,20 +58,17 @@ public class MaxDonaldsGuiBuilder {
 
         chickenTomatoKetchup.addActionListener(e->{
             MaxMacDonald maxMacDonald = new MaxMacDonald(new ChickenTomatoKetchup());
-            Burger burger = maxMacDonald.orderBurger();
-            burgerOrderModel.addBurger(burger);
+            burgerOrderModel.addBurger(maxMacDonald.orderBurger());
         });
 
         fishLettuceAiloi.addActionListener(e->{
             MaxMacDonald maxMacDonald = new MaxMacDonald(new FishLettuceAiloi());
-            Burger burger = maxMacDonald.orderBurger();
-            burgerOrderModel.addBurger(burger);
+            burgerOrderModel.addBurger(maxMacDonald.orderBurger());
         });
 
         beffPickleMayoBurgerButton.addActionListener(e->{
             MaxMacDonald maxMacDonald = new MaxMacDonald(new BeefPicklesMayo());
-            Burger burger = maxMacDonald.orderBurger();
-            burgerOrderModel.addBurger(burger);
+            burgerOrderModel.addBurger(maxMacDonald.orderBurger());
         });
 
         orderPanel.add(beffPickleMayoBurgerButton);

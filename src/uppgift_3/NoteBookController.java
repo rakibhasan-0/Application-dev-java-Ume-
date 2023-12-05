@@ -3,6 +3,11 @@ import javax.swing.*;
 import java.util.HashMap;
 import java.util.UUID;
 
+/**
+ * Controller class which is responsible for the actions that performed when the user clicks
+ * certain buttons on the gui.
+ */
+
 public class NoteBookController{
     NoteCareTaker careTaker = new NoteCareTaker();
     HashMap<Integer, UUID> notesIdMap = new HashMap<>();
@@ -29,14 +34,13 @@ public class NoteBookController{
                     notesIdMap.remove(selectedNoteIndex);
                     selectedNoteIndex = -1;
                 }
-            } else {
+            }else {
                 JOptionPane.showMessageDialog(null, "No note selected", "Error", JOptionPane.ERROR_MESSAGE);
             }
         });
     }
 
-    // TODO exception handling!!
-    // check for the exception.
+
     private void restoreButton() {
         gui.getRestoreButton().addActionListener(e -> {
             if (selectedNoteIndex != -1) {
@@ -45,6 +49,10 @@ public class NoteBookController{
                     NoteMemento memento = careTaker.getMemento(selectedNoteId);
                     if (memento != null) {
                         String previousState = memento.getNote();
+                        String textFromTextArea = gui.getTextArea().getText();
+                        if(textFromTextArea.equals(previousState)){
+                            previousState = careTaker.getMemento(selectedNoteId).getNote();
+                        }
                         gui.getTextArea().setText(previousState);
                         Note currentNote = notes.get(selectedNoteId);
                         if (currentNote != null) {
@@ -54,7 +62,7 @@ public class NoteBookController{
                         gui.getTextArea().setText(" ");
                     }
                 }
-            } else {
+            }else {
                 JOptionPane.showMessageDialog(null, "No note selected to restore.", "Error", JOptionPane.ERROR_MESSAGE);
             }
         });
@@ -72,7 +80,6 @@ public class NoteBookController{
                         String noteText = gui.getTextArea().getText();
                         currentNote.setNote(noteText);
                         careTaker.saveMemento(currentNote);
-
                     } else {
                         JOptionPane.showMessageDialog(null, "Error retrieving the note to save.", "Error", JOptionPane.ERROR_MESSAGE);
                     }
