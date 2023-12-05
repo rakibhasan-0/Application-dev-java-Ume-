@@ -1,7 +1,7 @@
-package uppgift_2.maxdonalds;
+package uppgift_2;
 
 
-import se.umu.cs.apjava.burger.Burger;
+import se.umu.cs.apjava.maxdonalds.burger.Burger;
 
 /**
  * That is a concrete factory class it means that class will take instance of the abstract

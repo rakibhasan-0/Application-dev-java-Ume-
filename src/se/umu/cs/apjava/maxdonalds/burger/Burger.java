@@ -1,6 +1,10 @@
-package se.umu.cs.apjava.burger;
+package se.umu.cs.apjava.maxdonalds.burger;
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * That class contains all the methods and attributes that will be present all types of burgers.
+ */
 
 public abstract class Burger {
     protected List<String> vegetables;

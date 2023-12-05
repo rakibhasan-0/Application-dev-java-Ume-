@@ -1,4 +1,4 @@
-package uppgift_2.maxdonalds;
+package uppgift_2;
 
 import javax.swing.SwingUtilities;
 
