@@ -1,4 +1,4 @@
-package se.umu.cs.apjava.burger.maxdonalds;
+package uppgift_2.maxdonalds;
 
 import javax.swing.SwingUtilities;
 

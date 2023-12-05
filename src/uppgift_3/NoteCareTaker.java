@@ -2,6 +2,11 @@ package uppgift_3;
 import java.util.Stack;
 import java.util.*;
 
+
+/**
+ *  That class save the snap shot of the memento class and the user of that class can
+ *  retrieve certain snapshot which is already stored within that class.
+ */
 public class NoteCareTaker {
     private final HashMap<UUID, Stack<NoteMemento>> mementosMap;
 
@@ -28,7 +33,6 @@ public class NoteCareTaker {
         }
         return null;
     }
-
 
 
     public ArrayList<NoteMemento> getMementos(UUID noteId) {

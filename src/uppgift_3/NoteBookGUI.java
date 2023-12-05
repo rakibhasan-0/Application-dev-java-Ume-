@@ -3,6 +3,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 
+/**
+ * That class is responsible for the creation of the GUI and essential components.
+ */
+
 public class NoteBookGUI {
 
     private final JTextArea textArea;

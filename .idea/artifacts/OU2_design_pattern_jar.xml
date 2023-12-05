@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="OU2_design_pattern:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/OU2_design_pattern_jar</output-path>
+    <root id="archive" name="OU2_design_pattern.jar">
+      <element id="module-output" name="OU2_design_pattern" />
+    </root>
+  </artifact>
+</component>

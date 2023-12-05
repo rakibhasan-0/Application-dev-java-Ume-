@@ -1,13 +1,16 @@
 package uppgift_3;
 import java.util.UUID;
 
+/**
+ * That class is responsible for creating memento objects.
+ */
 public class NoteMemento {
-    private UUID id;
-    private String note;
+    private final UUID id;
+    private final String noteText;
 
     public NoteMemento(UUID id, String note) {
         this.id = id;
-        this.note = note;
+        this.noteText = note;
     }
 
     public UUID getId(){
@@ -15,6 +18,6 @@ public class NoteMemento {
     }
 
     public String getNote(){
-        return note;
+        return noteText;
     }
 }

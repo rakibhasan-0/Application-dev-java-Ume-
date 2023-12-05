@@ -1,6 +1,6 @@
-package se.umu.cs.apjava.burger.maxdonalds;
-import se.umu.cs.apjava.burger.maxdonalds.burger.Burger;
-import se.umu.cs.apjava.burger.maxdonalds.burger.BurgerBuilder;
+package uppgift_2.maxdonalds;
+import se.umu.cs.apjava.burger.Burger;
+import se.umu.cs.apjava.burger.BurgerBuilder;
 
 public class BurgerOrderModel {
     private Order currentOrder=new Order();

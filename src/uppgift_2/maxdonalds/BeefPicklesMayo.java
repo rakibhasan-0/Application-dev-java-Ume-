@@ -1,8 +1,12 @@
-package se.umu.cs.apjava.burger.maxdonalds;
-import se.umu.cs.apjava.burger.maxdonalds.burger.Burger;
-import se.umu.cs.apjava.burger.maxdonalds.burger.BurgerBuilder;
+package uppgift_2.maxdonalds;
+import se.umu.cs.apjava.burger.Burger;
+import se.umu.cs.apjava.burger.BurgerBuilder;
 
-
+/**
+ * It represents a certain burger type which is Beef Pickles Mayo burger. This implements
+ * the BurgerFactory interface and it will use BurgerBuilder class to create that
+ * specific burger.
+ */
 public class BeefPicklesMayo implements BurgerFactory {
     private final BurgerBuilder builder;
 
