@@ -40,6 +40,7 @@ public class NoteBookController{
         });
     }
 
+
     private void restoreButton() {
         gui.getRestoreButton().addActionListener(e -> {
             if (selectedNoteIndex != -1) {
@@ -48,7 +49,8 @@ public class NoteBookController{
                     NoteMemento memento = careTaker.getMemento(selectedNoteId);
                     if (memento != null) {
                         setPreviousState(memento, selectedNoteId);
-                    }else {
+                    }
+                    else {
                         gui.getTextArea().setText(" ");
                         Note note = notes.get(selectedNoteId);
                         if(note != null) {
@@ -61,6 +63,8 @@ public class NoteBookController{
             }
         });
     }
+
+
 
     private void setPreviousState(NoteMemento memento, UUID selectedNoteId) {
         String previousState = memento.getNote();
@@ -80,6 +84,9 @@ public class NoteBookController{
         gui.getTextArea().setText(previousState);
 
     }
+
+
+
 
 
     private void saveButton() {
@@ -104,6 +111,9 @@ public class NoteBookController{
 
 
 
+
+
+
     private void selectedNote() {
         gui.getListOfNotes().addListSelectionListener(e -> {
             if (!e.getValueIsAdjusting()) {
@@ -123,6 +133,8 @@ public class NoteBookController{
             }
         });
     }
+
+
 
 
     private void createNoteButton() {
