@@ -17,6 +17,10 @@ public class NoteBookGUI {
     private final JButton restoreButton;
     private final JButton createNote;
 
+    /**
+     * NoteBookGUI it will construct gui components. In that class we will create some gette
+     * methods to get the gui components.
+     */
 
     public NoteBookGUI() {
 

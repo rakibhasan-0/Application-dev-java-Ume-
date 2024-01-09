@@ -24,6 +24,10 @@ public class NoteBookController{
         deleteButton();
     }
 
+
+    /**
+     * It handles the actions that performed when the user clicks the delete button.
+     */
     private void deleteButton() {
         gui.getDeleteButton().addActionListener(e -> {
             if (selectedNoteIndex >= 0 && selectedNoteIndex < gui.getListModel().getSize()) {
@@ -41,6 +45,9 @@ public class NoteBookController{
     }
 
 
+    /**
+     * Handles the actions that performed when the user clicks the restore button.
+     */
     private void restoreButton() {
         gui.getRestoreButton().addActionListener(e -> {
             if (selectedNoteIndex != -1) {
@@ -65,7 +72,11 @@ public class NoteBookController{
     }
 
 
-
+    /**
+     * It will store the previous state of the note.
+     * @param memento the Memento to restore to previous state
+     * @param selectedNoteId the note ID.
+     */
     private void setPreviousState(NoteMemento memento, UUID selectedNoteId) {
         String previousState = memento.getNote();
         String textFromTextArea = gui.getTextArea().getText();
@@ -86,9 +97,9 @@ public class NoteBookController{
     }
 
 
-
-
-
+    /**
+     * It will save the note by clicking the save button.
+     */
     private void saveButton() {
         gui.getSaveButton().addActionListener(e -> {
             if (selectedNoteIndex != -1) {
@@ -110,10 +121,10 @@ public class NoteBookController{
     }
 
 
-
-
-
-
+    /**
+     * That fucntion will show the user that current note that has been selected,
+     * and its content will visible to the user.
+     */
     private void selectedNote() {
         gui.getListOfNotes().addListSelectionListener(e -> {
             if (!e.getValueIsAdjusting()) {
@@ -135,7 +146,10 @@ public class NoteBookController{
     }
 
 
-
+    /**
+     * By clicking that note the user will be able to create a new note, it will be visible in the list
+     * of notes.
+     */
 
     private void createNoteButton() {
         gui.getCreateNoteButton().addActionListener(e->{
