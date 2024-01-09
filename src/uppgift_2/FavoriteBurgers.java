@@ -6,7 +6,7 @@ public class FavoriteBurgers implements FavouriteBurgersFactory{
 
     // creating a burger that type of the chicken, tomato and ketchup
     @Override
-    public Burger createChickenBurger() {
+    public Burger createSpecialBurger() {
         BurgerBuilder builder = new BurgerBuilder();
         builder.setMeat("Chicken");
         builder.addVegetable("Tomato");
@@ -18,7 +18,7 @@ public class FavoriteBurgers implements FavouriteBurgersFactory{
 
     // fish burger
     @Override
-    public Burger createFishBurger() {
+    public Burger createPremiumBurger() {
         BurgerBuilder builder = new BurgerBuilder();
         builder.setMeat("Fish");
         builder.addSauce("Ailoi");
@@ -29,7 +29,7 @@ public class FavoriteBurgers implements FavouriteBurgersFactory{
 
     // beef burger
     @Override
-    public Burger createBeefBurger() {
+    public Burger createClassicBurger() {
         BurgerBuilder builder = new BurgerBuilder();
         builder.setMeat("beef");
         builder.addVegetable("pickles");
