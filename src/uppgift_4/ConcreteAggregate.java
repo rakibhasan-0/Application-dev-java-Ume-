@@ -14,6 +14,11 @@ public class ConcreteAggregate implements Aggregate {
         currentPosition = linkedList.first();
     }
 
+
+    /**
+     * It adds the given object to the list of objects.
+     * @param name
+     */
     public void add(Object name){
         linkedList.insert(currentPosition,name);
         currentPosition = linkedList.next(currentPosition);

@@ -1,4 +1,5 @@
 package uppgift_2;
+import se.umu.cs.apjava.maxdonalds.burger.Burger;
 import javax.swing.*;
 import java.awt.*;
 
@@ -56,18 +57,21 @@ public class MaxDonaldsGuiBuilder {
         orderPanel.add(fishLettuceAiloi);
 
         chickenTomatoKetchup.addActionListener(e->{
-            MaxMacDonald maxMacDonald = new MaxMacDonald(new ChickenTomatoKetchup());
-            burgerOrderModel.addBurger(maxMacDonald.orderBurger());
+            FavouriteBurgersFactory factory = new FavoriteBurgers();
+            Burger chickenTomatoKetchUpBurger = factory.createChickenBurger();
+            burgerOrderModel.addBurger(chickenTomatoKetchUpBurger);
         });
 
         fishLettuceAiloi.addActionListener(e->{
-            MaxMacDonald maxMacDonald = new MaxMacDonald(new FishLettuceAiloi());
-            burgerOrderModel.addBurger(maxMacDonald.orderBurger());
+            FavouriteBurgersFactory factory = new FavoriteBurgers();
+            Burger fishLettuceAiloiBurger = factory.createFishBurger();
+            burgerOrderModel.addBurger(fishLettuceAiloiBurger);
         });
 
         beffPickleMayoBurgerButton.addActionListener(e->{
-            MaxMacDonald maxMacDonald = new MaxMacDonald(new BeefPicklesMayo());
-            burgerOrderModel.addBurger(maxMacDonald.orderBurger());
+            FavouriteBurgersFactory factory = new FavoriteBurgers();
+            Burger beefPickleMayoBurger = factory.createBeefBurger();
+            burgerOrderModel.addBurger(beefPickleMayoBurger);
         });
 
         orderPanel.add(beffPickleMayoBurgerButton);
@@ -104,19 +108,19 @@ public class MaxDonaldsGuiBuilder {
         withKetchupButton = new JCheckBox("Ketchup");
         withKetchupButton.setAlignmentX(Component.LEFT_ALIGNMENT);
         withKetchupButton.addChangeListener(e->
-            burgerOrderModel.setWithKetchup(withKetchupButton.isSelected())
+                burgerOrderModel.setWithKetchup(withKetchupButton.isSelected())
         );
         additionsPanel.add(withKetchupButton);
         withMayoButton = new JCheckBox("Mayo");
         withMayoButton.setAlignmentX(Component.LEFT_ALIGNMENT);
         withMayoButton.addChangeListener(e->
-            burgerOrderModel.setWithMayo(withMayoButton.isSelected())
+                burgerOrderModel.setWithMayo(withMayoButton.isSelected())
         );
         additionsPanel.add(withMayoButton);
         withAioliButton = new JCheckBox("Aioli");
         withAioliButton.setAlignmentX(Component.LEFT_ALIGNMENT);
         withAioliButton.addChangeListener(e->
-            burgerOrderModel.setWithAioli(withAioliButton.isSelected())
+                burgerOrderModel.setWithAioli(withAioliButton.isSelected())
         );
         additionsPanel.add(withAioliButton);
         JComponent withTextPanel = getTextPanel();
@@ -134,21 +138,21 @@ public class MaxDonaldsGuiBuilder {
         withLettuceButton = new JCheckBox("Lettuce");
         withLettuceButton.setAlignmentX(Component.LEFT_ALIGNMENT);
         withLettuceButton.addChangeListener(e->
-            burgerOrderModel.setWithLettuce(withLettuceButton.isSelected())
+                burgerOrderModel.setWithLettuce(withLettuceButton.isSelected())
         );
 
         additionsPanel.add(withLettuceButton);
         withTomatoButton = new JCheckBox("Tomato");
         withTomatoButton.setAlignmentX(Component.LEFT_ALIGNMENT);
         withTomatoButton.addChangeListener(e->
-            burgerOrderModel.setWithTomato(withTomatoButton.isSelected())
+                burgerOrderModel.setWithTomato(withTomatoButton.isSelected())
         );
 
         additionsPanel.add(withTomatoButton);
         withPicklesButton = new JCheckBox("Pickles");
         withPicklesButton.setAlignmentX(Component.LEFT_ALIGNMENT);
         withPicklesButton.addChangeListener(e->
-            burgerOrderModel.setWithPickles(withPicklesButton.isSelected())
+                burgerOrderModel.setWithPickles(withPicklesButton.isSelected())
         );
 
         additionsPanel.add(withPicklesButton);
@@ -172,15 +176,15 @@ public class MaxDonaldsGuiBuilder {
         var burgerPanel=new Box(BoxLayout.Y_AXIS);
         var chickenBurgerButton=new JRadioButton("ChickenBurger");
         chickenBurgerButton.addActionListener(e->
-            burgerOrderModel.setType("Chicken")
+                burgerOrderModel.setType("Chicken")
         );
         var beefBurgerButton=new JRadioButton("BeefBurger");
         beefBurgerButton.addActionListener(e->
-            burgerOrderModel.setType("Beef")
+                burgerOrderModel.setType("Beef")
         );
         var fishBurgerButton=new JRadioButton("FishBurger");
         fishBurgerButton.addActionListener(e->
-            burgerOrderModel.setType("Fish")
+                burgerOrderModel.setType("Fish")
         );
         burgerGroup = new ButtonGroup();
         burgerGroup.add(beefBurgerButton);

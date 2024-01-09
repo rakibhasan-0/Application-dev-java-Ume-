@@ -13,6 +13,10 @@ public class Note {
         this.note = "";
     }
 
+    /**
+     * It will get the note.
+     * @return The note.
+     */
     public String getNote() {
         return note;
     }
@@ -21,10 +25,19 @@ public class Note {
         this.note = note;
     }
 
+    /**
+     * It will get the note id number.
+     * @return The note id number.
+     */
     public UUID getId() {
         return id;
     }
 
+
+    /**
+     * It will create the memento and the note with the given state will be saved.
+     * @return It will create NoteMemento.
+     */
     public NoteMemento save(){
         return new NoteMemento(this.id, this.note);
     }
