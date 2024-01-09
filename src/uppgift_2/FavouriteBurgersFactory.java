@@ -5,7 +5,9 @@ import se.umu.cs.apjava.maxdonalds.burger.Burger;
  * It is an abstract class factory.
  */
 public interface FavouriteBurgersFactory {
-    Burger createBeefBurger();
-    Burger createFishBurger();
-    Burger createChickenBurger();
+    Burger createClassicBurger();
+    Burger createPremiumBurger();
+    Burger createSpecialBurger();
 }
+
+

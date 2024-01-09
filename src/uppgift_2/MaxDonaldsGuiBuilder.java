@@ -58,19 +58,19 @@ public class MaxDonaldsGuiBuilder {
 
         chickenTomatoKetchup.addActionListener(e->{
             FavouriteBurgersFactory factory = new FavoriteBurgers();
-            Burger chickenTomatoKetchUpBurger = factory.createChickenBurger();
+            Burger chickenTomatoKetchUpBurger = factory.createSpecialBurger();
             burgerOrderModel.addBurger(chickenTomatoKetchUpBurger);
         });
 
         fishLettuceAiloi.addActionListener(e->{
             FavouriteBurgersFactory factory = new FavoriteBurgers();
-            Burger fishLettuceAiloiBurger = factory.createFishBurger();
+            Burger fishLettuceAiloiBurger = factory.createPremiumBurger();
             burgerOrderModel.addBurger(fishLettuceAiloiBurger);
         });
 
         beffPickleMayoBurgerButton.addActionListener(e->{
             FavouriteBurgersFactory factory = new FavoriteBurgers();
-            Burger beefPickleMayoBurger = factory.createBeefBurger();
+            Burger beefPickleMayoBurger = factory.createClassicBurger();
             burgerOrderModel.addBurger(beefPickleMayoBurger);
         });
 
